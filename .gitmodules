@@ -1,0 +1,13 @@
+[submodule "pack/github/start/copilot.vim"]
+	path = pack/github/start/copilot.vim
+	url = https://github.com/github/copilot.vim.git
+[submodule "pack/copilotchat/start/copilot.lua"]
+	path = pack/copilotchat/start/copilot.lua
+	url = https://github.com/zbirenbaum/copilot.lua
+[submodule "pack/copilotchat/start/plenary.nvim"]
+	path = pack/copilotchat/start/plenary.nvim
+	url = https://github.com/nvim-lua/plenary.nvim
+[submodule "pack/copilotchat/start/CopilotChat.nvim"]
+	path = pack/copilotchat/start/CopilotChat.nvim
+	url = https://github.com/CopilotC-Nvim/CopilotChat.nvim
+	branch = canary
