@@ -13,3 +13,6 @@ vim.api.nvim_create_autocmd("VimEnter", {
   desc = "Disable Copilot by default on startup",
   command = "Copilot disable",
 })
+
+-- Disable mouse
+vim.o.mouse = ''
