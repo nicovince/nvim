@@ -11,3 +11,6 @@
 	path = pack/copilotchat/start/CopilotChat.nvim
 	url = https://github.com/CopilotC-Nvim/CopilotChat.nvim
 	branch = canary
+[submodule "pack/flake8/start/flake8"]
+	path = pack/flake8/start/flake8
+	url = https://github.com/nvie/vim-flake8
