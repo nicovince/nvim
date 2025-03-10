@@ -17,12 +17,5 @@ vim.api.nvim_create_autocmd("VimEnter", {
 -- Disable mouse
 vim.o.mouse = ''
 
-
--- python debugger
--- Check if debugpy virtenv exists
--- It can be created with:
--- mkvirtualenv debugpy
--- pip install debugpy
-if vim.fn.isdirectory(os.getenv("HOME") .. "/.virtualenvs/debugpy") then
-  require("dap-python").setup("/home/nicolas/.virtualenvs/debugpy/bin/python")
-end
+-- Debugger config
+require('nvim-dap-usercfg')
