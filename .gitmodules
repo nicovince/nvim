@@ -20,3 +20,6 @@
 [submodule "pack/nvim-dap-python/start/nvim-dap-python"]
 	path = pack/nvim-dap-python/start/nvim-dap-python
 	url = https://github.com/mfussenegger/nvim-dap-python
+[submodule "pack/nvim-lint/start/nvim-lint"]
+	path = pack/nvim-lint/start/nvim-lint
+	url = https://github.com/mfussenegger/nvim-lint

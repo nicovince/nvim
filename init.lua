@@ -17,5 +17,18 @@ vim.api.nvim_create_autocmd("VimEnter", {
 -- Disable mouse
 vim.o.mouse = ''
 
+-- command to toggle vim.diagnostic
+-- The diagnostic is the left column and virtual text showing off after linters parse, or showing breakpoint.
+vim.api.nvim_create_user_command(
+  'ToggleDiagnostic',
+  function()
+    vim.diagnostic.enable(not vim.diagnostic.is_enabled())
+  end,
+  {bang = true, desc ="Toggle diagnostic"}
+)
+
 -- Debugger config
 require('nvim-dap-usercfg')
+
+-- linter config
+require('nvim-lint-usercfg')
