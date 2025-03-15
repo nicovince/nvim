@@ -1,5 +1,6 @@
 -- configuration of nvim-lint plugin
 require('lint').linters_by_ft = {
+        ghaction = { 'actionlint' },
         python = { 'flake8' },
 }
 

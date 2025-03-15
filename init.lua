@@ -17,6 +17,12 @@ vim.api.nvim_create_autocmd("VimEnter", {
 -- Disable mouse
 vim.o.mouse = ''
 
+-- fileteypes
+vim.filetype.add({
+  pattern = {[".*/.github/workflows/.*%.yml"] = "yaml.ghaction",}
+})
+
+
 -- command to toggle vim.diagnostic
 -- The diagnostic is the left column and virtual text showing off after linters parse, or showing breakpoint.
 vim.api.nvim_create_user_command(
