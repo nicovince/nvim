@@ -8,15 +8,8 @@ require("CopilotChat").setup {
   debug = true, -- Enable debugging
   -- See Configuration section for rest
 }
--- Disable copilot by default
-vim.g.copilot_filetypes = {
-  ["*"] = false,
-}
--- explicitly request for copilot suggestions on Ctrl-j
-vim.keymap.set('i', '<C-j>', '<Plug>(copilot-suggest)')
-vim.keymap.set('i', '<C-h>', '<Plug>(copilot-previous)')
-vim.keymap.set('i', '<C-l>', '<Plug>(copilot-next)')
 
+require('copilot-usercfg')
 
 -- Disable mouse
 vim.o.mouse = ''
