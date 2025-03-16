@@ -9,10 +9,14 @@ require("CopilotChat").setup {
   -- See Configuration section for rest
 }
 -- Disable copilot by default
-vim.api.nvim_create_autocmd("VimEnter", {
-  desc = "Disable Copilot by default on startup",
-  command = "Copilot disable",
-})
+vim.g.copilot_filetypes = {
+  ["*"] = false,
+}
+-- explicitly request for copilot suggestions on Ctrl-j
+vim.keymap.set('i', '<C-j>', '<Plug>(copilot-suggest)')
+vim.keymap.set('i', '<C-h>', '<Plug>(copilot-previous)')
+vim.keymap.set('i', '<C-l>', '<Plug>(copilot-next)')
+
 
 -- Disable mouse
 vim.o.mouse = ''
