@@ -1,8 +1,12 @@
--- vim: tabstop=2 shiftwidth=2 expandtab
-
 -- Source legacy vimrc configuration
 local vimrc = vim.fn.stdpath("config") .. "/legacy_vimrc.vim"
 vim.cmd.source(vimrc)
+
+vim.cmd [[colorscheme vim]]
+-- Show line number
+vim.wo.number = true
+-- Disable mouse
+vim.o.mouse = ''
 
 require("CopilotChat").setup {
   debug = true, -- Enable debugging
@@ -10,9 +14,6 @@ require("CopilotChat").setup {
 }
 
 require('copilot-usercfg')
-
--- Disable mouse
-vim.o.mouse = ''
 
 -- fileteypes
 vim.filetype.add({

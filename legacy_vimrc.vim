@@ -75,7 +75,6 @@ endif
 "-------------------------------
 " User interface configuration
 "-------------------------------
-set number " display line number
 set statusline=%<%f\ %h%m%r%{FugitiveStatusline()}%=%-14.(%l,%c%V%)\ %P "status bar
 set laststatus=2 " Always show status line
 set background=dark " My terminal background is dark.
@@ -311,11 +310,3 @@ else
   set autoindent    " always set autoindenting on
 
 endif " has("autocmd")
-
-if has('nvim-0.10')
-  colorscheme vim
-elseif has('nvim')
-  colorscheme default
-else
-  colorscheme desert
-endif
