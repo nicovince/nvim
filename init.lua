@@ -2,11 +2,20 @@
 local vimrc = vim.fn.stdpath("config") .. "/legacy_vimrc.vim"
 vim.cmd.source(vimrc)
 
-vim.cmd [[colorscheme vim]]
--- Show line number
-vim.wo.number = true
+vim.cmd.colorscheme('vim')
 -- Disable mouse
 vim.o.mouse = ''
+-- when splitting the cursor is set on the right window
+vim.o.splitright = true
+-- Show matching opening parenthesis, curly braces, ...
+vim.o.showmatch = true
+-- two lines visible above and under cursor
+vim.o.scrolloff = 2
+
+-- Show line number
+vim.o.number = true
+-- replace tabulation with spaces
+vim.o.expandtab = true
 
 require("CopilotChat").setup {
   debug = true, -- Enable debugging

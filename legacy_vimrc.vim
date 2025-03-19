@@ -112,25 +112,11 @@ set wildmenu " show menu when pressing TAB in command mode
 set wildmode=list:longest " complete with longest common string
 set wildignore=*.o,*.obj,*.bak,*.exe,*~ " do not complete with some pattern
 
-set scrolloff=2 " two lines visible above and under cursor
-set ruler      " show the cursor position all the time
-set showcmd    " display incomplete commands
 set history=50 " keep 50 lines of command line history
 
 "---------------------
 " Edition options
 "---------------------
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
-" wrap on a word insert of character at the end of a long line
-"set lbr
-set showmatch " show matching opening parenthesis, curly braces
-set expandtab " replace tabulation with spaces
-set incsearch  " do incremental searching
-set splitright " when splitting the cursor is on the right window
-
-
-
 if has('vms')
   set nobackup    " do not keep a backup file, use versions instead
 else
