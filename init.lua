@@ -17,6 +17,10 @@ vim.o.number = true
 -- replace tabulation with spaces
 vim.o.expandtab = true
 
+if vim.fn.isdirectory('/usr/share/doc/fzf/examples') then
+  vim.opt.runtimepath:append('/usr/share/doc/fzf/examples')
+end
+
 require("CopilotChat").setup {
   debug = true, -- Enable debugging
   -- See Configuration section for rest
