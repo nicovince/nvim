@@ -11,6 +11,8 @@ vim.o.splitright = true
 vim.o.showmatch = true
 -- two lines visible above and under cursor
 vim.o.scrolloff = 2
+-- status line (overriden with lightline)
+vim.o.statusline = "%<%f %h%m%r%{FugitiveStatusline()}%=%-14.(%l,%c%V%) %P"
 
 -- Show line number
 vim.o.number = true

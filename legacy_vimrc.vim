@@ -71,9 +71,6 @@ endif
 "-------------------------------
 " User interface configuration
 "-------------------------------
-set statusline=%<%f\ %h%m%r%{FugitiveStatusline()}%=%-14.(%l,%c%V%)\ %P "status bar
-set laststatus=2 " Always show status line
-set background=dark " My terminal background is dark.
 
 " Lightline configuration, overrides statusline and tabline
 let g:lightline = {
