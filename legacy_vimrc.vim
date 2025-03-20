@@ -71,32 +71,6 @@ endif
 "-------------------------------
 " User interface configuration
 "-------------------------------
-
-" Lightline configuration, overrides statusline and tabline
-let g:lightline = {
-  \ 'component_function': {
-  \   'gitbranch': 'FugitiveStatusline'
-  \ },
-  \ }
-let g:lightline.component = {
-  \ 'charvalhexprefix': '0x%B',
-  \ 'lineinfovirt': '%3l:%-2c%2V'}
-let g:lightline.tabline = {
-  \ 'left': [ [ 'tabs' ] ],
-  \ 'right': [ [ 'close' ] ] }
-let g:lightline.active = {
-  \ 'left': [ [ 'mode', 'paste' ],
-  \           [ 'readonly', 'filename', 'modified' ],
-  \           [ 'gitbranch'] ],
-  \ 'right': [ [ 'lineinfovirt' ],
-  \            [ 'percent' ],
-  \            [ 'fileformat', 'fileencoding' ] ] }
-
-let g:lightline.inactive = {
-  \ 'left': [ [ 'relativepath', 'modified' ] ],
-  \ 'right': [ [ 'line' ],
-  \            [ 'percent' ] ] }
-
 " Remove toolbar
 set guioptions-=T
 

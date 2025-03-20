@@ -13,6 +13,27 @@ vim.o.showmatch = true
 vim.o.scrolloff = 2
 -- status line (overriden with lightline)
 vim.o.statusline = "%<%f %h%m%r%{FugitiveStatusline()}%=%-14.(%l,%c%V%) %P"
+vim.g.lightline = {
+  colorscheme = 'one',
+  component_function = {
+    gitbranch = 'FugitiveStatusline'
+  },
+  component = {
+    lineinfovirt = '%3l:%-2c%2V'
+  },
+  active = {
+    left = { { 'mode', 'paste' }, { 'readonly', 'filename', 'modified' }, { 'gitbranch' } },
+    right = { { 'lineinfovirt' }, { 'percent' }, { 'fileformat', 'fileencoding' } },
+  },
+  inactive = {
+    left = { { 'relativepath', 'modified' } },
+    right = { { 'line' }, { 'percent' } },
+  },
+  tabline = {
+    left = { { 'tabs' } },
+    right = {},
+  }
+}
 
 -- Show line number
 vim.o.number = true
