@@ -2,6 +2,10 @@
 local vimrc = vim.fn.stdpath("config") .. "/legacy_vimrc.vim"
 vim.cmd.source(vimrc)
 
+------------------------
+--- interface config ---
+------------------------
+
 vim.cmd.colorscheme('vim')
 -- Disable mouse
 vim.o.mouse = ''
@@ -47,6 +51,21 @@ vim.o.wildignore = '*.o,*.obj,*.bak,*.exe,*~'
 vim.o.history = 100
 -- enable backup
 vim.o.backup = true
+
+
+---------------
+--- keymaps ---
+---------------
+
+-- ctags mapping
+-- jump to tag under cursor
+vim.keymap.set('n', '!z', ':Tags <C-R><C-W><CR>', { noremap = true, silent = true })
+-- tab window
+vim.keymap.set('n', '!t', ':tab split <CR> :Tags <C-R><C-W><CR>', { noremap = true, silent = true })
+-- split window
+vim.keymap.set('n', '!s', ':split <CR> :Tags <C-R><C-W><CR>', { noremap = true, silent = true })
+
+
 
 -- lilypond
 local function setup_lilypond(lilypond_path)

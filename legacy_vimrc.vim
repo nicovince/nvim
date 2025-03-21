@@ -54,15 +54,15 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ctags mapping
 " jump to tag under cursor
-map !z :Tags <C-R><C-W><CR>
-" tab window
-map !t :tab split <CR> :Tags <C-R><C-W><CR>
-" split window
-map !s :split <CR> :Tags <C-R><C-W><CR>
-" open a preview window and jump to to tag under cursor
-map !p :ptjump <C-R><C-W><CR>
-" close preview window
-map !c :pclose <CR>
+"map !z :Tags <C-R><C-W><CR>
+"" tab window
+"map !t :tab split <CR> :Tags <C-R><C-W><CR>
+"" split window
+"map !s :split <CR> :Tags <C-R><C-W><CR>
+"" open a preview window and jump to to tag under cursor
+"map !p :ptjump <C-R><C-W><CR>
+"" close preview window
+"map !c :pclose <CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Highligh trailing whitespaces
