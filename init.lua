@@ -39,6 +39,10 @@ vim.g.lightline = {
 vim.o.number = true
 -- replace tabulation with spaces
 vim.o.expandtab = true
+-- complete with longest common string from command mode on tab press
+vim.o.wildmode = 'list:longest:lastused'
+-- do not complete with some patterns
+vim.o.wildignore = '*.o,*.obj,*.bak,*.exe,*~'
 
 -- lilypond
 local function setup_lilypond(lilypond_path)

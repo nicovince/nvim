@@ -53,11 +53,6 @@ endif
 " Remove toolbar
 set guioptions-=T
 
-set showtabline=1 " show tabline only if there are at least two tab
-set wildmenu " show menu when pressing TAB in command mode
-set wildmode=list:longest " complete with longest common string
-set wildignore=*.o,*.obj,*.bak,*.exe,*~ " do not complete with some pattern
-
 set history=50 " keep 50 lines of command line history
 
 "---------------------
