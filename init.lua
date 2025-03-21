@@ -43,6 +43,10 @@ vim.o.expandtab = true
 vim.o.wildmode = 'list:longest:lastused'
 -- do not complete with some patterns
 vim.o.wildignore = '*.o,*.obj,*.bak,*.exe,*~'
+-- Numer of lines of history in command mode
+vim.o.history = 100
+-- enable backup
+vim.o.backup = true
 
 -- lilypond
 local function setup_lilypond(lilypond_path)

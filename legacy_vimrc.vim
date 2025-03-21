@@ -47,35 +47,9 @@ else
   set shell=/bin/bash " Shell to use for external command (:!ls)
 endif
 
-"-------------------------------
-" User interface configuration
-"-------------------------------
-" Remove toolbar
-set guioptions-=T
-
-set history=50 " keep 50 lines of command line history
-
-"---------------------
-" Edition options
-"---------------------
-if has('vms')
-  set nobackup    " do not keep a backup file, use versions instead
-else
-  set backup    " keep a backup file
-endif
-
-" For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
-" let &guioptions = substitute(&guioptions, "t", "", "g")
-
-" Don't use Ex mode, use Q for formatting
-map Q gq
-
 "-------------
 " Shortcuts
 "-------------
-" change current directory to current file directory
-map !cd :lcd %:p:h<CR>
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ctags mapping
