@@ -56,6 +56,58 @@ vim.o.backup = true
 ---------------
 --- keymaps ---
 ---------------
+-- Highlight extra whitespace
+vim.cmd('highlight ExtraWhitespace ctermbg=red guibg=red')
+-- Global variable to control highlighting
+vim.g.highlight_trailing_ws = 1
+-- Function to match trailing whitespace
+function MatchTrailingWS()
+    if vim.g.highlight_trailing_ws == 1 then
+        vim.cmd('match ExtraWhitespace /\\s\\+$/')
+    end
+end
+
+-- Function to match trailing whitespace except for the current line
+function MatchTrailingWSExceptCurrent()
+    if vim.g.highlight_trailing_ws == 1 then
+        vim.cmd('match ExtraWhitespace /\\s\\+\\%#\\@<!$/')
+    end
+end
+
+-- Function to enable highlighting
+function EnableHighlightTrailingWS()
+    vim.g.highlight_trailing_ws = 1
+    vim.cmd('highlight ExtraWhitespace ctermbg=red guibg=red')
+    MatchTrailingWS()
+end
+
+-- Function to disable highlighting
+function DisableHighlightTrailingWS()
+    vim.g.highlight_trailing_ws = 0
+    vim.cmd('highlight clear ExtraWhitespace')
+end
+
+-- Initial call to match trailing whitespace
+MatchTrailingWS()
+
+-- Key mappings to toggle highlighting on and off
+vim.api.nvim_set_keymap('n', '<Leader>wn', ':lua EnableHighlightTrailingWS()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>wf', ':lua DisableHighlightTrailingWS()<CR>', { noremap = true, silent = true })
+
+vim.api.nvim_create_autocmd("WinEnter", {
+  pattern = { "*" },
+  command = "lua MatchTrailingWS()"
+})
+vim.api.nvim_create_autocmd("InsertEnter", {
+  pattern = { "*" },
+  command = "lua MatchTrailingWSExceptCurrent()"
+})
+vim.api.nvim_create_autocmd("InsertLeave", {
+  pattern = { "*" },
+  command = "lua MatchTrailingWS()"
+})
+
+
 
 -- ctags mapping
 -- jump to tag under cursor

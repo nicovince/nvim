@@ -41,67 +41,6 @@ if has('nvim')
   source $utilsvimrc
 endif
 
-if has('win32')
-  set fileformats=dos,unix
-else
-  set shell=/bin/bash " Shell to use for external command (:!ls)
-endif
-
-"-------------
-" Shortcuts
-"-------------
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ctags mapping
-" jump to tag under cursor
-"map !z :Tags <C-R><C-W><CR>
-"" tab window
-"map !t :tab split <CR> :Tags <C-R><C-W><CR>
-"" split window
-"map !s :split <CR> :Tags <C-R><C-W><CR>
-"" open a preview window and jump to to tag under cursor
-"map !p :ptjump <C-R><C-W><CR>
-"" close preview window
-"map !c :pclose <CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Highligh trailing whitespaces
-highlight ExtraWhitespace ctermbg=red guibg=red
-let g:highlight_trailing_ws = 1
-
-" Match all whitespaces at end of line
-function MatchTrailingWS()
-    if g:highlight_trailing_ws == 1
-        match ExtraWhitespace /\s\+$/
-    endif
-endfunction
-
-" Match whitespaces at end of line except for current line
-function MatchTrailingWSExceptCurrent()
-    if g:highlight_trailing_ws == 1
-        match ExtraWhitespace /\s\+\%#\@<!$/
-    endif
-endfunction
-
-" Enable highlighting
-function EnableHighlightTrailingWS()
-    let g:highlight_trailing_ws = 1
-    highlight ExtraWhitespace ctermbg=red guibg=red
-    call MatchTrailingWS()
-endfunction
-
-" Disable highlighting
-function DisableHighlightTrailingWS()
-    let g:highlight_trailing_ws = 0
-    highlight clear ExtraWhitespace
-endfunction
-
-call MatchTrailingWS()
-" highlight trailing spaces on/off \wn / \wf
-nnoremap <Leader>wn :call EnableHighlightTrailingWS()<CR>
-nnoremap <Leader>wf :call DisableHighlightTrailingWS()<CR>
-
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " clang-format mappings
@@ -199,9 +138,6 @@ if has('autocmd')
   " Highlight trailing space, must be set before colorscheme command
   " Based on https://vim.fandom.com/wiki/Highlight_unwanted_spaces
   autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-  autocmd WinEnter * call MatchTrailingWS()
-  autocmd InsertEnter * call MatchTrailingWSExceptCurrent()
-  autocmd InsertLeave * call MatchTrailingWS()
   autocmd BufWinLeave * call clearmatches()
 
   augroup END
