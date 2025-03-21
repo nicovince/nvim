@@ -36,10 +36,10 @@ if filereadable($localvimrc)
 endif
 
 " Source utils.vim when using neovim
-" if has('nvim')
-"   let $utilsvimrc =  $vimfolder . '/plugin/utils.vim'
-"   source $utilsvimrc
-" endif
+if has('nvim')
+  let $utilsvimrc =  '/home/nicolas/.vim/plugin/utils.vim'
+  source $utilsvimrc
+endif
 
 if has('win32')
   set fileformats=dos,unix
