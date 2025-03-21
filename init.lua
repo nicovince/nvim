@@ -40,6 +40,17 @@ vim.o.number = true
 -- replace tabulation with spaces
 vim.o.expandtab = true
 
+-- lilypond
+local function setup_lilypond(lilypond_path)
+  if vim.fn.isdirectory(lilypond_path) == 1 then
+    vim.cmd('filetype off')
+    vim.opt.runtimepath:append(lilypond_path)
+    vim.cmd('filetype on')
+    vim.cmd('syntax on')
+  end
+end
+setup_lilypond('/usr/share/lilypond/2.22.1/vim')
+
 if vim.fn.isdirectory('/usr/share/doc/fzf/examples') then
   vim.opt.runtimepath:append('/usr/share/doc/fzf/examples')
 end
