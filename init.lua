@@ -108,6 +108,14 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 })
 
 
+-- command mode mapping
+-- Saner command line history
+-- Uses ctrl-p and ctrl-n to go up in history by recalling command line whose
+-- beginning matches the current command line (similar to bash
+-- history-search-backward/forward)
+vim.api.nvim_set_keymap('c', '<C-n>', '<Down>', { noremap = true, silent = false })
+vim.api.nvim_set_keymap('c', '<C-p>', '<Up>', { noremap = true, silent = false })
+
 
 -- ctags mapping
 -- jump to tag under cursor
