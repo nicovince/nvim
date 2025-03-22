@@ -117,7 +117,6 @@ if has('autocmd')
   " Highlight trailing space, must be set before colorscheme command
   " Based on https://vim.fandom.com/wiki/Highlight_unwanted_spaces
   autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-  autocmd BufWinLeave * call clearmatches()
 
   augroup END
 

@@ -106,6 +106,10 @@ vim.api.nvim_create_autocmd("InsertLeave", {
   pattern = { "*" },
   command = "lua MatchTrailingWS()"
 })
+vim.api.nvim_create_autocmd("BufWinLeave", {
+  pattern = { "*" },
+  command = "call clearmatches()"
+})
 
 
 -- command mode mapping
