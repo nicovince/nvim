@@ -137,6 +137,14 @@ vim.keymap.set('n', '!t', ':tab split <CR> :Tags <C-R><C-W><CR>', { noremap = tr
 vim.keymap.set('n', '!s', ':split <CR> :Tags <C-R><C-W><CR>', { noremap = true, silent = true })
 
 
+-- filetypes per file extension or pattern or filename
+vim.filetype.add({
+  extension = {
+    lypp = 'lilypond',
+    overlay = 'dts',
+    vh = 'verilog',
+  },
+})
 
 -- lilypond
 local function setup_lilypond(lilypond_path)

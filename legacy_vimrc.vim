@@ -100,18 +100,6 @@ if has('autocmd')
     \   exe "normal g`\"" |
     \ endif
 
-  " filetype
-  autocmd BufNEwFile,BufRead *.overlay setlocal filetype=dts
-  autocmd BufNEwFile,BufRead *.lypp setlocal filetype=lilypond
-  autocmd BufNEwFile,BufRead *.vh setlocal filetype=verilog
-  autocmd BufNEwFile,BufRead SConstruct setlocal filetype=python
-  autocmd BufNEwFile,BufRead *.cw setlocal filetype=c
-  autocmd BufNEwFile,BufRead *.sv setlocal filetype=verilog
-  autocmd BufNEwFile,BufRead *.lte setlocal filetype=xml
-  autocmd BufNEwFile,BufRead hg-editor-*.txt setlocal syntax=hgcommit
-  autocmd BufNEwFile,BufRead hg-editor.msg setlocal syntax=hgcommit
-  autocmd BufRead,BufNewFile iceberg.txt set filetype=icelog
-  autocmd Filetype ada setlocal sw=3 expandtab
 
   """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
   " Highlight trailing space, must be set before colorscheme command
