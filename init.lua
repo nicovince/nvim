@@ -116,6 +116,13 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 vim.api.nvim_set_keymap('c', '<C-n>', '<Down>', { noremap = true, silent = false })
 vim.api.nvim_set_keymap('c', '<C-p>', '<Up>', { noremap = true, silent = false })
 
+-- Abbreviation in command mode to replace '%%' with the path of the current file
+vim.api.nvim_set_keymap('c', '%%', "expand('%:h')", { expr = true, noremap = true })
+
+-- fix typos in command line mode
+vim.cmd([[cabbrev hlep help]])
+vim.cmd([[cabbrev hepl help]])
+
 
 -- ctags mapping
 -- jump to tag under cursor
