@@ -1,16 +1,3 @@
-set runtimepath^=~/.vim runtimepath+=~/.vim/after
-let &packpath = &runtimepath
-" An example for a vimrc file.
-"
-" Maintainer: Bram Moolenaar <Bram@vim.org>
-" Last change:  2002 Sep 19
-"
-" To use it, copy it to
-"     for Unix and OS/2:  ~/.vimrc
-"       for Amiga:  s:.vimrc
-"  for MS-DOS and Win32:  $VIM\_vimrc
-"     for OpenVMS:  sys$login:.vimrc
-
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? 'evim'
   finish
@@ -26,18 +13,16 @@ endif
 " vim -u /path/to/vimrc
 " since i know this file is in my vim folder I can retrieve vim folder
 " by getting full path of this file without the filename
-let $vimfolder = expand('<sfile>:p:h')
-" the ^= assign the variable if the rhs is not already in the lhs
-set runtimepath^=$vimfolder
+let $nvimfolder = expand('<sfile>:p:h')
 
-let $localvimrc = $vimfolder . '/local.vim'
+let $localvimrc = $nvimfolder . '/local.vim'
 if filereadable($localvimrc)
   source $localvimrc
 endif
 
 " Source utils.vim when using neovim
 if has('nvim')
-  let $utilsvimrc =  '/home/nicolas/.vim/plugin/utils.vim'
+  let $utilsvimrc =  $nvimfolder . '/plugin/utils.vim'
   source $utilsvimrc
 endif
 
