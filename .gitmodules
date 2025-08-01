@@ -35,3 +35,6 @@
 [submodule "pack/fzf.vim/start/fzf.vim"]
 	path = pack/fzf.vim/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim
+[submodule "pack/vim-shellcheck/start/vim-shellcheck"]
+	path = pack/vim-shellcheck/start/vim-shellcheck
+	url = https://github.com/itspriddle/vim-shellcheck
