@@ -111,6 +111,10 @@ vim.api.nvim_create_autocmd("BufWinLeave", {
   command = "call clearmatches()"
 })
 
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = { "filter-list.txt" },
+  command = "set filetype=gitignore"
+})
 
 -- command mode mapping
 -- Saner command line history
