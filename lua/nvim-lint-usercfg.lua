@@ -7,3 +7,5 @@ require('lint').linters_by_ft = {
 -- Run linter
 -- LInter Run
 vim.keymap.set('n', '<Leader>lir', function() require('lint').try_lint() end)
+
+-- to hide the diagnostic after linting: ':ToggleDiagnostic'
