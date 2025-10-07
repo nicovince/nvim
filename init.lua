@@ -115,6 +115,10 @@ vim.api.nvim_create_autocmd("BufEnter", {
   pattern = { "filter-list.txt" },
   command = "set filetype=gitignore"
 })
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = { "vog-zephyr-nodes/test/filters/*.txt" },
+  command = "set filetype=gitignore"
+})
 
 -- command mode mapping
 -- Saner command line history
