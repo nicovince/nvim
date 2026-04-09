@@ -34,7 +34,7 @@ vim.api.nvim_create_user_command(
   'CHdrGuard',
   function()
     local filename = vim.fn.expand('%:t')
-    local guard = '__' .. string.gsub(string.upper(filename), '%p', '_') .. '__'
+    local guard = string.gsub(string.upper(filename), '%p', '_')
     local cursor = vim.api.nvim_win_get_cursor(0)
     local pos = cursor[2]
     local line = cursor[1]
