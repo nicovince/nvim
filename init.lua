@@ -16,6 +16,8 @@ vim.pack.add({
   { src = 'https://github.com/mfussenegger/nvim-dap-python', version = '1808458eba2b18f178f990e01376941a42c7f93b' },
   { src = 'https://github.com/nvie/vim-flake8', version = 'a245098a174f30feff1b4387526876975042084a' },
   { src = 'https://github.com/github/copilot.vim.git', version = 'v1.59.0' },
+  { src = 'https://github.com/nvim-lua/plenary.nvim', version = 'b9fd5226c2f76c951fc8ed5923d85e4de065e509' },
+  { src = 'https://github.com/CopilotC-Nvim/CopilotChat.nvim', version = 'v4.7.4' },
 })
 
 ------------------------
