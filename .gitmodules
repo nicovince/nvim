@@ -23,9 +23,3 @@
 [submodule "pack/nvim-lint/start/nvim-lint"]
 	path = pack/nvim-lint/start/nvim-lint
 	url = https://github.com/mfussenegger/nvim-lint
-[submodule "pack/lightline.vim/start/lightline.vim"]
-	path = pack/lightline.vim/start/lightline.vim
-	url = https://github.com/itchyny/lightline.vim
-[submodule "pack/fzf.vim/start/fzf.vim"]
-	path = pack/fzf.vim/start/fzf.vim
-	url = https://github.com/junegunn/fzf.vim
