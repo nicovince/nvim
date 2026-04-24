@@ -14,6 +14,3 @@
 [submodule "pack/flake8/start/flake8"]
 	path = pack/flake8/start/flake8
 	url = https://github.com/nvie/vim-flake8
-[submodule "pack/nvim-dap/start/nvim-dap"]
-	path = pack/nvim-dap/start/nvim-dap
-	url = https://github.com/mfussenegger/nvim-dap.git
