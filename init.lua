@@ -2,6 +2,13 @@
 local vimrc = vim.fn.stdpath("config") .. "/legacy_vimrc.vim"
 vim.cmd.source(vimrc)
 
+-------------
+-- plugins --
+-------------
+vim.pack.add({
+  { src = 'https://github.com/tpope/vim-surround.git', version = 'v2.2' },
+})
+
 ------------------------
 --- interface config ---
 ------------------------
