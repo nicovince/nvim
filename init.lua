@@ -2,6 +2,25 @@
 local vimrc = vim.fn.stdpath("config") .. "/legacy_vimrc.vim"
 vim.cmd.source(vimrc)
 
+-------------
+-- plugins --
+-------------
+vim.pack.add({
+  { src = 'https://github.com/tpope/vim-surround.git', version = 'v2.2' },
+  { src = 'https://github.com/itspriddle/vim-shellcheck', version = 'v1.1.1' },
+  { src = 'https://github.com/tpope/vim-fugitive.git', version = '3b753cf8c6a4dcde6edee8827d464ba9b8c4a6f0' },
+  { src = 'https://github.com/itchyny/lightline.vim', version = '6c283f8df85aa7219fa4096a6ed4ff45d48aa9e1' },
+  { src = 'https://github.com/junegunn/fzf.vim', version = 'b9624aa012ddcbae9e79964bfd30cc1fbe3cf263' },
+  { src = 'https://github.com/mfussenegger/nvim-lint', version = 'eab58b48eb11d7745c11c505e0f3057165902461' },
+  { src = 'https://github.com/mfussenegger/nvim-dap.git', version = '45a69eba683a2c448dd9ecfc4de89511f0646b5f' },
+  { src = 'https://github.com/mfussenegger/nvim-dap-python', version = '1808458eba2b18f178f990e01376941a42c7f93b' },
+  { src = 'https://github.com/nvie/vim-flake8', version = 'a245098a174f30feff1b4387526876975042084a' },
+  { src = 'https://github.com/github/copilot.vim.git', version = 'v1.59.0' },
+  { src = 'https://github.com/nvim-lua/plenary.nvim', version = 'b9fd5226c2f76c951fc8ed5923d85e4de065e509' },
+  { src = 'https://github.com/CopilotC-Nvim/CopilotChat.nvim', version = 'v4.7.4' },
+},
+{ confirm = vim.env.NVIM_AUTOINSTALL_PLUGINS ~= "true" })
+
 ------------------------
 --- interface config ---
 ------------------------

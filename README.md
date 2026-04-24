@@ -1,3 +1,7 @@
+# Requirements
+
+- nvim >= 0.12.0
+
 # Download and install
 
 ```bash
