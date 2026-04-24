@@ -8,6 +8,7 @@ vim.cmd.source(vimrc)
 vim.pack.add({
   { src = 'https://github.com/tpope/vim-surround.git', version = 'v2.2' },
   { src = 'https://github.com/itspriddle/vim-shellcheck', version = 'v1.1.1' },
+  { src = 'https://github.com/tpope/vim-fugitive.git', version = '3b753cf8c6a4dcde6edee8827d464ba9b8c4a6f0' },
 })
 
 ------------------------
