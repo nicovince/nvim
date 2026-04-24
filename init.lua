@@ -18,7 +18,8 @@ vim.pack.add({
   { src = 'https://github.com/github/copilot.vim.git', version = 'v1.59.0' },
   { src = 'https://github.com/nvim-lua/plenary.nvim', version = 'b9fd5226c2f76c951fc8ed5923d85e4de065e509' },
   { src = 'https://github.com/CopilotC-Nvim/CopilotChat.nvim', version = 'v4.7.4' },
-})
+},
+{ confirm = vim.env.NVIM_AUTOINSTALL_PLUGINS ~= "true" })
 
 ------------------------
 --- interface config ---
