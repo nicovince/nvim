@@ -15,6 +15,7 @@ vim.pack.add({
   { src = 'https://github.com/mfussenegger/nvim-dap.git', version = '45a69eba683a2c448dd9ecfc4de89511f0646b5f' },
   { src = 'https://github.com/mfussenegger/nvim-dap-python', version = '1808458eba2b18f178f990e01376941a42c7f93b' },
   { src = 'https://github.com/nvie/vim-flake8', version = 'a245098a174f30feff1b4387526876975042084a' },
+  { src = 'https://github.com/github/copilot.vim.git', version = 'v1.59.0' },
 })
 
 ------------------------

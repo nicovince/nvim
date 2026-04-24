@@ -1,6 +1,3 @@
-[submodule "pack/github/start/copilot.vim"]
-	path = pack/github/start/copilot.vim
-	url = https://github.com/github/copilot.vim.git
 [submodule "pack/copilotchat/start/copilot.lua"]
 	path = pack/copilotchat/start/copilot.lua
 	url = https://github.com/zbirenbaum/copilot.lua
