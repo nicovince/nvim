@@ -11,6 +11,7 @@ vim.pack.add({
   { src = 'https://github.com/tpope/vim-fugitive.git', version = '3b753cf8c6a4dcde6edee8827d464ba9b8c4a6f0' },
   { src = 'https://github.com/itchyny/lightline.vim', version = '6c283f8df85aa7219fa4096a6ed4ff45d48aa9e1' },
   { src = 'https://github.com/junegunn/fzf.vim', version = 'b9624aa012ddcbae9e79964bfd30cc1fbe3cf263' },
+  { src = 'https://github.com/mfussenegger/nvim-lint', version = 'eab58b48eb11d7745c11c505e0f3057165902461' },
 })
 
 ------------------------
