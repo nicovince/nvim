@@ -12,6 +12,7 @@ vim.pack.add({
   { src = 'https://github.com/itchyny/lightline.vim', version = '6c283f8df85aa7219fa4096a6ed4ff45d48aa9e1' },
   { src = 'https://github.com/junegunn/fzf.vim', version = 'b9624aa012ddcbae9e79964bfd30cc1fbe3cf263' },
   { src = 'https://github.com/mfussenegger/nvim-lint', version = 'eab58b48eb11d7745c11c505e0f3057165902461' },
+  { src = 'https://github.com/mfussenegger/nvim-dap-python', version = '1808458eba2b18f178f990e01376941a42c7f93b' },
 })
 
 ------------------------
