@@ -40,6 +40,11 @@
       "src": "https://github.com/nvim-lua/plenary.nvim",
       "version": "'b9fd5226c2f76c951fc8ed5923d85e4de065e509'"
     },
+    "vim-dispatch": {
+      "rev": "488940870ab478cc443b06d5a62fea7ab999eabf",
+      "src": "https://github.com/tpope/vim-dispatch.git",
+      "version": "'v1.8'"
+    },
     "vim-flake8": {
       "rev": "a245098a174f30feff1b4387526876975042084a",
       "src": "https://github.com/nvie/vim-flake8",
