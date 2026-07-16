@@ -45,6 +45,11 @@
       "src": "https://github.com/tpope/vim-dispatch.git",
       "version": "'v1.8'"
     },
+    "vim-easy-align": {
+      "rev": "9815a55dbcd817784458df7a18acacc6f82b1241",
+      "src": "https://github.com/junegunn/vim-easy-align",
+      "version": "'9815a55dbcd817784458df7a18acacc6f82b1241'"
+    },
     "vim-flake8": {
       "rev": "a245098a174f30feff1b4387526876975042084a",
       "src": "https://github.com/nvie/vim-flake8",
